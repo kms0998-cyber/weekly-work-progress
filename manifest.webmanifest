@@ -1,0 +1,18 @@
+{
+  "name": "금주 업무 진행률",
+  "short_name": "업무 진행률",
+  "description": "주간 업무 진행률을 실시간으로 계산합니다.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f6fb",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
