@@ -89,7 +89,7 @@ function update(){
  const monday=new Date(now);monday.setHours(0,0,0,0);const dow=monday.getDay();monday.setDate(monday.getDate()+(dow===0?-6:1-dow));
  let elapsed=0;for(let i=0;i<5;i++){const d=new Date(monday);d.setDate(monday.getDate()+i);elapsed+=elapsedForDay(d,now,s,e)}
  elapsed=Math.max(0,Math.min(total,elapsed));const pct=total?Math.max(0,Math.min(100,elapsed/total*100)):0;
- $('percent').textContent=`${Math.round(pct)}%`;$('bar').style.width=`${pct}%`;$('track').setAttribute('aria-valuenow',String(Math.round(pct)));
+ $('percent').textContent=`${pct.toFixed(1)}%`;$('bar').style.width=`${pct}%`;$('track').setAttribute('aria-valuenow',String(Math.round(pct)));
  $('elapsed').textContent=dur(elapsed);$('total').textContent=dur(total);
  const friday=new Date(monday);friday.setDate(monday.getDate()+4);$('week').textContent=`산정 기간: ${dateFmt(monday)} ~ ${dateFmt(friday)}`;
 }
